@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectCapability Include="DynamicFileNesting" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Database\Oracle\Function\" />
+		<Folder Include="Database\Oracle\Procedure\" />
+		<Folder Include="Database\SqlServer\Function\" />
+		<Folder Include="Database\SqlServer\Procedure\" />
+		<Folder Include="Exceptions\" />
+		<Folder Include="Migrations\" />
+		<Folder Include="Persistence\EntryConfig\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\COREBIT.Domain.FinancialStatus\COREBIT.Domain.FinancialStatus.csproj" />
+	</ItemGroup>
+</Project>
